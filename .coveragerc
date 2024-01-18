@@ -1,0 +1,6 @@
+[run]
+relative_files=true
+source=./systemsense
+[json]
+show_contexts=True
+pretty_print=True
