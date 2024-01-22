@@ -30,12 +30,12 @@ that the content provided in the `README.md` file for this GitHub repository is
 an overview of the project and thus may not include the details for every step
 needed to successfully complete every project deliverable. This means that you
 may need to schedule a meeting during the course instructor's office hours to
-discuss aspects of this project. Finally, it is important to point out that
-your repository for this project was created from the GitHub repository
-template called
-[algorithmology-setup-starter](https://github.com/Algorithmology/algorithmology-setup-solution);
-you can check this repository for any updates to this project's documentation
-or source code!
+discuss aspects of this project. Finally, it is important to point out that your
+repository for this project was created from the GitHub repository template
+called
+[algorithmology-setup-starter](https://github.com/Algorithmology/algorithmology-setup-starter),
+you can check this repository for any updates to this project's documentation or
+source code!
 
 ## 🤝 Seeking Assistance
 
