@@ -138,6 +138,7 @@ def get_disk() -> Dict[str, str]:
 
 def get_hostname() -> Dict[str, str]:
     """Return the hostname of the system."""
+    # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
     return {function_name: function_value}
@@ -145,6 +146,7 @@ def get_hostname() -> Dict[str, str]:
 
 def get_memory() -> Dict[str, str]:
     """Return the hostname of the system."""
+    # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
     return {function_name: function_value}
@@ -152,6 +154,7 @@ def get_memory() -> Dict[str, str]:
 
 def get_platform() -> Dict[str, str]:
     """Return the current platform of the system."""
+    # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
     return {function_name: function_value}
@@ -159,6 +162,7 @@ def get_platform() -> Dict[str, str]:
 
 def get_pythonversion() -> Dict[str, str]:
     """Return the current python version on the system."""
+    # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
     return {function_name: function_value}
@@ -166,6 +170,7 @@ def get_pythonversion() -> Dict[str, str]:
 
 def get_runningprocesses() -> Dict[str, str]:
     """Return the total number of processes running on the system."""
+    # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
     return {function_name: function_value}
@@ -173,6 +178,7 @@ def get_runningprocesses() -> Dict[str, str]:
 
 def get_system() -> Dict[str, str]:
     """Return the current platform of the system."""
+    # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
     return {function_name: function_value}
@@ -180,6 +186,7 @@ def get_system() -> Dict[str, str]:
 
 def get_systemload() -> Dict[str, str]:
     """Return information about the current system load."""
+    # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
     return {function_name: function_value}
@@ -187,6 +194,7 @@ def get_systemload() -> Dict[str, str]:
 
 def get_swap() -> Dict[str, str]:
     """Return information about swap space usage."""
+    # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
     return {function_name: function_value}
@@ -194,6 +202,7 @@ def get_swap() -> Dict[str, str]:
 
 def get_virtualenv() -> Dict[str, str]:
     """Return the virtual environment hosting this process."""
+    # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
     return {function_name: function_value}
