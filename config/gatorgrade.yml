@@ -8,6 +8,11 @@ setup: |
 # Checks on Files {{{
 
 # perform checks on a file
+- README.md:
+    - description: Ensure that the README.md file exists in the GitHub repository
+      check: ConfirmFileExists
+
+# perform checks on a file
 - systemsense/systemsense/main.py:
     - description: Ensure that the main.py file exists in the systemsense/systemsense/ directory
       check: ConfirmFileExists
@@ -24,6 +29,121 @@ setup: |
         count: 2
         exact: false
     - description: Create a sufficient number of single-line comments in main.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 5
+        exact: false
+
+# perform checks on a file
+- systemsense/systemsense/benchmark.py:
+    - description: Ensure that the benchmark.py file exists in the systemsense/systemsense/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for benchmark.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in benchmark.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 12
+        exact: false
+    - description: Create a sufficient number of single-line comments in benchmark.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 20
+        exact: false
+
+# perform checks on a file
+- systemsense/systemsense/constants.py:
+    - description: Ensure that the constants.py file exists in the systemsense/systemsense/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for constants.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in constants.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 5
+        exact: false
+    - description: Create a sufficient number of single-line comments in constants.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 4
+        exact: false
+
+# perform checks on a file
+- systemsense/systemsense/detect.py:
+    - description: Ensure that the detect.py file exists in the systemsense/systemsense/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for detect.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in detect.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 15
+        exact: false
+    - description: Create a sufficient number of single-line comments in detect.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 50
+        exact: false
+
+# perform checks on a file
+- systemsense/systemsense/execute.py:
+    - description: Ensure that the execute.py file exists in the systemsense/systemsense/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for execute.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in execute.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 1
+        exact: false
+    - description: Create a sufficient number of single-line comments in execute.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 10
+        exact: false
+
+# perform checks on a file
+- systemsense/systemsense/util.py:
+    - description: Ensure that the util.py file exists in the systemsense/systemsense/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for util.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in util.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 3
+        exact: false
+    - description: Create a sufficient number of single-line comments in util.py
       check: CountSingleLineComments
       options:
         language: "Python"
@@ -102,11 +222,27 @@ setup: |
 # Program Output {{{
 
 # run the program and confirm correct number of lines in the output
-- description: Run the program and confirm the correct number of non-blank lines in the output, using list approach
+- description: Run the program and confirm the correct number of non-blank lines in the output
   check: CountCommandOutput
   options:
     command: "cd systemsense && poetry run systemsense"
-    count: 8
+    count: 10
+    exact: false
+
+# run the program and confirm correct number of lines in the output
+- description: Run the program and confirm the correct number of non-blank lines in the output
+  check: CountCommandOutput
+  options:
+    command: "cd systemsense && poetry run systemsense --help"
+    count: 10
+    exact: false
+
+# run the program and confirm correct number of lines in the output
+- description: Run the program and confirm the correct number of non-blank lines in the output
+  check: CountCommandOutput
+  options:
+    command: "cd systemsense && poetry run systemsense systeminfo"
+    count: 20
     exact: false
 
 # }}}
