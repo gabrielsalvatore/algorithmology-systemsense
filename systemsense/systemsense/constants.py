@@ -2,6 +2,12 @@
 
 from dataclasses import dataclass
 
+# TODO: make sure that you understand how this
+# module uses a dataclass to define constants
+
+# TODO: make sure that you fill in the missing
+# labels for some of the constants below
+
 
 # interface constant
 @dataclass(frozen=True)
@@ -20,11 +26,11 @@ class Interface:
 
 interface = Interface(
     Welcome_System_Info=":sparkles: Displaying System Information",
-    Panel_System_Information="System Information",
+    Panel_System_Information="",
     Parameter_System="System Parameter",
     Parameter_Value_System="Parameter Value",
     Welcome_Benchmark_Info=":checkered_flag: Displaying Benchmark Results",
-    Panel_Benchmark_Information="Benchmark Results",
+    Panel_Benchmark_Information="",
     Parameter_Benchmark="Benchmark Name",
     Parameter_Value_Benchmark="Benchmark Results (sec)",
 )
