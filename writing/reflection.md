@@ -32,46 +32,63 @@
 
 <!---toc end-->
 
+TODO: Make sure that you remove all the markers in this file that serve a
+prompts for work that you have not yet completed. The final version of this
+report should be written as if it was a scientific report that you could publish
+on the Algorithmology web site or in a scientific journal.
+
 ## Gregory M. Kapfhammer
 
 ## Re-type the sentence "I adhered to the Allegheny College Honor Code while completing this project."
 
 TODO: You must retype the sentence here in order to digitally sign your pledge.
 
-
+"I adhered to the Allegheny College Honor Code while completing this project."
 
 **IMPORTANT:** If you do not type the required sentence then the course
 instructor will not know that you adhered to the Allegheny College Honor Code
 while completing the project.
 
+TODO: Please list here the sources that you consulted while completing the
+algorithm engineering project! The list of sources should also include
+references to any artificial intelligence coding assistants that you used and a
+summary of the ways in which you used those coding assistants to complete this
+project.
+
 ## Program Output
 
 ### Report at least five examples of program output to demonstrate that your `systemsense` program works correctly
 
-TODO: Please provide five examples of program output so as to clearly report
-that (i) the data collected in the first table does not vary across program runs
-and (ii) the data collected in the second table does vary across program runs.
+TODO: Please provide five examples of program output from running the command
+`poetry run systemsense completeinfo` so as to clearly report that (i) the data
+collected in the first table (i.e., the table that provides the `System
+Information`) does not vary across program runs and (ii) the data collected in
+the second table (i.e., the table that provides the `Benchmark Results`) does
+vary across program runs.
 
-TODO: Make sure that you report the program output with fenced code blocks.
+TODO: Please make sure that some of the provided data comes from running
+`systemsense` on your laptop and some of the provided data comes from running it
+in GitHub Actions. You should write a sentence before each output sample to make
+it clear where the data comes from. You may not hand-edit and of the program
+outputs that you provide in this report.
+
+TODO: Please provide the output from running the program in fenced code blocks
+within each of the following subsections.
 
 #### First output from running the `systemsense` program
 
-
 #### Second output from running the `systemsense` program
-
 
 #### Third output from running the `systemsense` program
 
-
 #### Fourth output from running the `systemsense` program
-
 
 #### Fifth output from running the `systemsense` program
 
-
 ## Experiment Design
 
-TODO: Pick at least one detection function provided by `systemsense` in `detect.py` and answer these questions:
+TODO: Pick at least one detection function provided by `systemsense` in `detect.py`
+and answer these questions:
 
 - What is the name of the function?
 - What parameter does this function detect?
@@ -118,7 +135,7 @@ work and commenting on the suitability of the function's design for its purpose.
 
 ### Describe in detail how the `get_cpufrequencies` function works
 
-TODO: Write at least one paragraph to explain the provided source code
+TODO: Write at least one paragraph to explain the request source code
 
 ```python
 def get_cpufrequencies() -> Dict[str, str]:
@@ -160,7 +177,7 @@ def get_cpufrequencies() -> Dict[str, str]:
 
 ### Describe in detail how the `get_battery` function works
 
-TODO: Write at least one paragraph to explain the provided code
+TODO: Write at least one paragraph to explain the provided source code
 
 ```python
 def get_battery() -> Dict[str, str]:
@@ -205,7 +222,6 @@ def get_battery() -> Dict[str, str]:
         return {function_name: str(battery)}
 ```
 
-
 ### Describe in detail how the `detect` function works
 
 TODO: Write at least one paragraph to explain the provided source code
@@ -229,19 +245,19 @@ def detect() -> Dict[str, str]:
 
 ### Given your experiences during the completion of this project, what do you predict will be challenging when performing algorithm engineering?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+TODO: Write at least one paragraph that answers this question in your own words.
 
 ### Why is it necessary to detect the parameters of a system before running experiments?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+TODO: Write at least one paragraph that answers this question in your own words.
 
 ### What could happen if you did not thoroughly test a function before evaluating its performance?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+TODO: Write at least one paragraph that answers this question in your own words.
 
 ### How do the empirical results suggest that you don't yet know the entire story about the performance results from the micro-benchmarks?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+TODO: Write at least one paragraph that answers this question in your own words.
 
 ## Take Home Points
 
