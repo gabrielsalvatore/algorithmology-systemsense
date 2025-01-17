@@ -26,46 +26,12 @@ def detect() -> Dict[str, str]:
     return util.union_list_of_dicts(run_output)
 
 
-def get_battery() -> Dict[str, str]:
+def get_battery():
     """Return information about the current power/battery in the system."""
-    # detect the name of the function in
-    # which this source code exists
-    function_name = inspect.stack()[0][3]
-    # parse out the second part of the name after
-    # the underscore character
-    function_name = function_name.split("_")[1]
-    # detect the power/battery information
-    battery = psutil.sensors_battery()
-    # if the battery is not present, then
-    # return a message indicating that
-    if battery is None:
-        return {function_name: "No battery is present"}
-    else:
-        # convert the number of seconds to
-        # a human-readable format; note that this
-        # value may be negative if the battery
-        # is charging and/or not discharging
-        if battery.secsleft < 0:
-            battery_life = "unknown seconds remaining"
-        # there is a specific estimate of the number of seconds
-        # remaining for the battery's current charge
-        else:
-            battery_life = (
-                util.convert_seconds_to_hours(battery.secsleft)
-                + " seconds remaining"
-            )
-        # extract the percentage of battery remaining
-        battery_percent = battery.percent
-        # create a final formatted string that includes:
-        # 1) the percentage of battery remaining
-        # 2) the number of seconds remaining
-        battery = (
-            f"{battery_percent:.2f}% battery life remaining, {battery_life}"
-        )
-        # create a dictionary with the function's
-        # purpose as the key and the value as
-        # the return of the function that collects it
-        return {function_name: str(battery)}
+    # TODO: refer to the writing/reflection.md file for
+    # an implementation of this function; please replace
+    # the "return None" statement with the actual implementation
+    return None
 
 
 def get_cpu() -> Dict[str, str]:
@@ -177,7 +143,6 @@ def get_runningprocesses() -> Dict[str, str]:
 
 
 def get_system() -> Dict[str, str]:
-    """Return the current platform of the system."""
     # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
@@ -185,14 +150,13 @@ def get_system() -> Dict[str, str]:
 
 
 def get_systemload() -> Dict[str, str]:
-    """Return information about the current system load."""
     # TODO: provide a complete implementation of this function
     function_name = ""
     function_value = ""
     return {function_name: function_value}
 
 
-def get_swap() -> Dict[str, str]:
+def get_swap():
     """Return information about swap space usage."""
     # TODO: provide a complete implementation of this function
     function_name = ""
@@ -200,7 +164,7 @@ def get_swap() -> Dict[str, str]:
     return {function_name: function_value}
 
 
-def get_virtualenv() -> Dict[str, str]:
+def get_virtualenv():
     """Return the virtual environment hosting this process."""
     # TODO: provide a complete implementation of this function
     function_name = ""
