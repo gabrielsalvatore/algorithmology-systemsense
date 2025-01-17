@@ -19,11 +19,11 @@ class Interface:
 
 
 interface = Interface(
-    Welcome_System_Info="✨ Displaying System Information",
+    Welcome_System_Info=":sparkles: Displaying System Information",
     Panel_System_Information="System Information",
     Parameter_System="System Parameter",
     Parameter_Value_System="Parameter Value",
-    Welcome_Benchmark_Info="🏁 Displaying Benchmark Results",
+    Welcome_Benchmark_Info=":checkered_flag: Displaying Benchmark Results",
     Panel_Benchmark_Information="Benchmark Results",
     Parameter_Benchmark="Benchmark Name",
     Parameter_Value_Benchmark="Benchmark Results (sec)",
