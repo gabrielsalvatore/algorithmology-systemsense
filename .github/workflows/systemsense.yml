@@ -26,6 +26,9 @@ jobs:
 
     - name: Install dependencies
       run: |
+        cd ..
+        cd ..
+        cd systemsense
         poetry install
 
     - name: Run Systemsense Program
