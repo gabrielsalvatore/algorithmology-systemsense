@@ -28,6 +28,7 @@ jobs:
       run: |
         cd ..
         cd ..
+        ls
         cd systemsense
         poetry install
 
