@@ -24,16 +24,23 @@ jobs:
         curl -sSL https://install.python-poetry.org | python3 -
         echo 'export PATH="$HOME/.local/bin:$PATH"' >> $GITHUB_ENV
 
+    - name: Verify Directory Structure
+      run: |
+        echo "Listing current directory:"
+        ls
+        echo "Listing one level up:"
+        ls ..
+        echo "Listing two levels up:"
+        ls ../..
+
     - name: Install dependencies
       run: |
-        cd ..
-        cd ..
-        ls
         cd systemsense
         poetry install
 
     - name: Run Systemsense Program
       run: |
+        cd systemsense
         poetry run systemsense completeinfo > output.txt
         cat output.txt
 
@@ -41,4 +48,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: systemsense-output
-        path: output.txt
+        path: systemsense/output.txt
