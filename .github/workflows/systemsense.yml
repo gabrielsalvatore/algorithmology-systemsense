@@ -1,0 +1,40 @@
+name: Run Systemsense Program
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  run-systemsense:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9' # Use the Python version your program supports
+
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        echo 'export PATH="$HOME/.local/bin:$PATH"' >> $GITHUB_ENV
+
+    - name: Install dependencies
+      run: |
+        poetry install
+
+    - name: Run Systemsense Program
+      run: |
+        poetry run systemsense completeinfo > output.txt
+        cat output.txt
+
+    - name: Upload Output
+      uses: actions/upload-artifact@v3
+      with:
+        name: systemsense-output
+        path: output.txt
