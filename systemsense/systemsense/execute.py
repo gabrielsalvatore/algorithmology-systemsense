@@ -4,10 +4,6 @@ import importlib
 import inspect
 from typing import Dict, List
 
-# TODO: make sure that you understand how the provided
-# function works and where it is called by the other
-# modules in the provided code base
-
 
 def execute_by_name_filter(
     module_name: str, function_name_filter: str

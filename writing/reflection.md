@@ -4,31 +4,31 @@
 
 <!---toc start-->
 
-* [Algorithmology Setup](#algorithmology-setup)
-  * [Table of Contents](#table-of-contents)
-  * [Gregory M. Kapfhammer](#gregory-m-kapfhammer)
-  * [Re-type the sentence "I adhered to the Allegheny College Honor Code while completing this project."](#re-type-the-sentence-i-adhered-to-the-allegheny-college-honor-code-while-completing-this-project)
-  * [Program Output](#program-output)
-    * [Report at least five examples of program output to demonstrate that your `systemsense` program works correctly](#report-at-least-five-examples-of-program-output-to-demonstrate-that-your-systemsense-program-works-correctly)
-      * [First output from running the `systemsense` program](#first-output-from-running-the-systemsense-program)
-      * [Second output from running the `systemsense` program](#second-output-from-running-the-systemsense-program)
-      * [Third output from running the `systemsense` program](#third-output-from-running-the-systemsense-program)
-      * [Fourth output from running the `systemsense` program](#fourth-output-from-running-the-systemsense-program)
-      * [Fifth output from running the `systemsense` program](#fifth-output-from-running-the-systemsense-program)
-  * [Experiment Design](#experiment-design)
-  * [Experimental Results](#experimental-results)
-    * [Results from running `systemsense` on your laptop](#results-from-running-systemsense-on-your-laptop)
-    * [Results from running `systemsense` in GitHub Actions](#results-from-running-systemsense-in-github-actions)
-  * [Source Code](#source-code)
-    * [Describe in detail how the `get_cpufrequencies` function works](#describe-in-detail-how-the-get_cpufrequencies-function-works)
-    * [Describe in detail how the `get_battery` function works](#describe-in-detail-how-the-get_battery-function-works)
-    * [Describe in detail how the `detect` function works](#describe-in-detail-how-the-detect-function-works)
-  * [Professional Development](#professional-development)
-    * [Given your experiences during the completion of this project, what do you predict will be challenging when performing algorithm engineering?](#given-your-experiences-during-the-completion-of-this-project-what-do-you-predict-will-be-challenging-when-performing-algorithm-engineering)
-    * [Why is it necessary to detect the parameters of a system before running experiments?](#why-is-it-necessary-to-detect-the-parameters-of-a-system-before-running-experiments)
-    * [What could happen if you did not thoroughly test a function before evaluating its performance?](#what-could-happen-if-you-did-not-thoroughly-test-a-function-before-evaluating-its-performance)
-    * [How do the empirical results suggest that you don't yet know the entire story about the performance results from the micro-benchmarks?](#how-do-the-empirical-results-suggest-that-you-dont-yet-know-the-entire-story-about-the-performance-results-from-the-micro-benchmarks)
-  * [Take Home Points](#take-home-points)
+- [Algorithmology Setup](#algorithmology-setup)
+  - [Table of Contents](#table-of-contents)
+  - [Gregory M. Kapfhammer](#gregory-m-kapfhammer)
+  - [Re-type the sentence "I adhered to the Allegheny College Honor Code while completing this project."](#re-type-the-sentence-i-adhered-to-the-allegheny-college-honor-code-while-completing-this-project)
+  - [Program Output](#program-output)
+    - [Report at least five examples of program output to demonstrate that your `systemsense` program works correctly](#report-at-least-five-examples-of-program-output-to-demonstrate-that-your-systemsense-program-works-correctly)
+      - [First output from running the `systemsense` program](#first-output-from-running-the-systemsense-program)
+      - [Second output from running the `systemsense` program](#second-output-from-running-the-systemsense-program)
+      - [Third output from running the `systemsense` program](#third-output-from-running-the-systemsense-program)
+      - [Fourth output from running the `systemsense` program](#fourth-output-from-running-the-systemsense-program)
+      - [Fifth output from running the `systemsense` program](#fifth-output-from-running-the-systemsense-program)
+  - [Experiment Design](#experiment-design)
+  - [Experimental Results](#experimental-results)
+    - [Results from running `systemsense` on your laptop](#results-from-running-systemsense-on-your-laptop)
+    - [Results from running `systemsense` in GitHub Actions](#results-from-running-systemsense-in-github-actions)
+  - [Source Code](#source-code)
+    - [Describe in detail how the `get_cpufrequencies` function works](#describe-in-detail-how-the-get_cpufrequencies-function-works)
+    - [Describe in detail how the `get_battery` function works](#describe-in-detail-how-the-get_battery-function-works)
+    - [Describe in detail how the `detect` function works](#describe-in-detail-how-the-detect-function-works)
+  - [Professional Development](#professional-development)
+    - [Given your experiences during the completion of this project, what do you predict will be challenging when performing algorithm engineering?](#given-your-experiences-during-the-completion-of-this-project-what-do-you-predict-will-be-challenging-when-performing-algorithm-engineering)
+    - [Why is it necessary to detect the parameters of a system before running experiments?](#why-is-it-necessary-to-detect-the-parameters-of-a-system-before-running-experiments)
+    - [What could happen if you did not thoroughly test a function before evaluating its performance?](#what-could-happen-if-you-did-not-thoroughly-test-a-function-before-evaluating-its-performance)
+    - [How do the empirical results suggest that you don't yet know the entire story about the performance results from the micro-benchmarks?](#how-do-the-empirical-results-suggest-that-you-dont-yet-know-the-entire-story-about-the-performance-results-from-the-micro-benchmarks)
+  - [Take Home Points](#take-home-points)
 
 <!---toc end-->
 
@@ -41,8 +41,6 @@ on the Algorithmology web site or in a scientific journal.
 
 ## Re-type the sentence "I adhered to the Allegheny College Honor Code while completing this project."
 
-TODO: You must retype the sentence here in order to digitally sign your pledge.
-
 "I adhered to the Allegheny College Honor Code while completing this project."
 
 **IMPORTANT:** If you do not type the required sentence then the course
@@ -54,6 +52,8 @@ algorithm engineering project! The list of sources should also include
 references to any artificial intelligence coding assistants that you used and a
 summary of the ways in which you used those coding assistants to complete this
 project.
+
+I've used Google Gemini while searching for clarification for parts of the code ßand ideas on how to do some of the required TODOs
 
 ## Program Output
 
@@ -76,6 +76,44 @@ TODO: Please provide the output from running the program in fenced code blocks
 within each of the following subsections.
 
 #### First output from running the `systemsense` program
+
+```
+╭─────────────────────────────────────────────── System Panel Information goes here ───────────────────────────────────────────────╮
+│ ╭──────────────────┬─────────────────────────────────────────────────────────────────────────────────────╮                       │
+│ │ System Parameter │ Parameter Value                                                                     │                       │
+│ ├──────────────────┼─────────────────────────────────────────────────────────────────────────────────────┤                       │
+│ │ battery          │ 52.00% battery life remaining, 4:06:00 seconds remaining                            │                       │
+│ │ cpu              │ CPU Usage: 10.90%                                                                   │                       │
+│ │ cpucores         │ Logical CPUs: 8, Physical Cores: 8                                                  │                       │
+│ │ cpufrequencies   │ Min: Unknown Mhz, Max: Unknown Mhz                                                  │                       │
+│ │ datetime         │ 2025-01-26 17:11:22                                                                 │                       │
+│ │ disk             │ Total: 228 GB, Used: 12 GB, Free: 17 GB, Percentage: 41.8%                          │                       │
+│ │ hostname         │ Gabriels-MacBook-Air.local                                                          │                       │
+│ │ memory           │ Total: 8 GB, Available: 2 GB, Used: 3 GB, Percentage: 74.2%                         │                       │
+│ │ platform         │ macOS-14.6.1-arm64-arm-64bit-Mach-O                                                 │                       │
+│ │ pythonversion    │ 3.13.1 (main, Dec  3 2024, 17:59:52) [Clang 16.0.0 (clang-1600.0.26.4)]             │                       │
+│ │ runningprocesses │ 437                                                                                 │                       │
+│ │ swap             │ Total: 5 GB, Used: 3 GB, Free: 1 GB, Percentage: 71.9%                              │                       │
+│ │ system           │ Darwin 23.6.0                                                                       │                       │
+│ │ systemload       │ 1 min: 2.796875, 5 min: 2.17919921875, 15 min: 2.02490234375                        │                       │
+│ │ virtualenv       │ /Users/gabrielsalvatore/Desktop/College/CS/CS 202/algorithmology-setup-starter/venv │                       │
+│ ╰──────────────────┴─────────────────────────────────────────────────────────────────────────────────────╯                       │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🏁 Displaying Benchmark Results
+
+╭───────────────────────────────────────────── Benchmark Panel Information goes here ──────────────────────────────────────────────╮
+│ ╭──────────────────────────┬─────────────────────────────────────────────────────────────────╮                                   │
+│ │ Benchmark Name           │ Benchmark Results (sec)                                         │                                   │
+│ ├──────────────────────────┼─────────────────────────────────────────────────────────────────┤                                   │
+│ │ benchmark_addition       │ [0.7926085829967633, 0.7978797920077341, 0.7912709999945946]    │                                   │
+│ │ benchmark_concatenation  │ [2.189818082988495, 2.1935449579905253, 2.1873558329971274]     │                                   │
+│ │ benchmark_exponentiation │ [2.193516125000315, 2.2165394159965217, 2.214360582991503]      │                                   │
+│ │ benchmark_multiplication │ [0.6486494159908034, 0.6483152090077056, 0.6469582499994431]    │                                   │
+│ │ rangelist                │ [0.09781108400784433, 0.08882924998761155, 0.08943549999094103] │                                   │
+│ ╰──────────────────────────┴─────────────────────────────────────────────────────────────────╯                                   │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+```
 
 #### Second output from running the `systemsense` program
 

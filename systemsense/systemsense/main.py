@@ -76,5 +76,45 @@ def benchmarkinfo() -> None:
 @cli.command()
 def completeinfo() -> None:
     """Report both the detected system information and the benchmark results."""
-    # TODO: Add the code to complete this command, noting that the
-    # output from the two sub-commands should be separated by a newline
+    # Display a label for system information
+    console.print(constants.interface.Welcome_System_Info)
+    console.print()
+    # Detect system information
+    system_info = detect.detect()
+    # Create and display the system information table
+    system_table = Table(box=box.ROUNDED, show_header=True)
+    system_table.add_column(constants.interface.Parameter_System)
+    system_table.add_column(constants.interface.Parameter_Value_System)
+    for label in sorted(system_info.keys()):
+        detail = system_info[label]
+        system_table.add_row(label, detail)
+    console.print(
+        Panel(
+            system_table,
+            title=constants.interface.Panel_System_Information,
+            expand=True,
+        )
+    )
+
+    # Add a newline between sections
+    console.print("\n")
+
+    # Display a label for benchmark information
+    console.print(constants.interface.Welcome_Benchmark_Info)
+    console.print()
+    # Detect benchmarking information
+    system_performance = benchmark.benchmark()
+    # Create and display the benchmarking information table
+    benchmark_table = Table(box=box.ROUNDED, show_header=True)
+    benchmark_table.add_column(constants.interface.Parameter_Benchmark)
+    benchmark_table.add_column(constants.interface.Parameter_Value_Benchmark)
+    for label in sorted(system_performance.keys()):
+        detail = system_performance[label]
+        benchmark_table.add_row(label, detail)
+    console.print(
+        Panel(
+            benchmark_table,
+            title=constants.interface.Panel_Benchmark_Information,
+            expand=True,
+        )
+    )

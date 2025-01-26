@@ -17,6 +17,10 @@ def union_list_of_dicts(container: List[Dict[str, str]]) -> Dict[str, str]:
     """Union a list of dictionaries into a single dictionary."""
     # define the output dictionary
     output: Dict[str, str] = {}
-    # TODO: add all of the source code statements needed to
-    # perform the task of unioning the list of dictionaries
-    return output
+
+    # iterate over each dictionary in the list
+    for d in container:
+        # update the output dictionary with the current dictionary
+        output.update(d)
+
+    return output  # return ouput

@@ -52,8 +52,12 @@ size = {size}
 
 def benchmark_addition(size: int = 100) -> None:
     """Perform a benchmark involving an addition."""
-    # TODO: initialize the result to zero;
-    # TODO: add the value of i to the result;
+    # initialize the result to zero;
+    result = 0
+    # add the value of i to the result;
+    for i in range(size):
+        for _ in range(3):
+            result += i
     # for each value of i in the range
     # of the specified size, add it to
     # the running result three times
@@ -63,45 +67,56 @@ def time_benchmark_addition(
     repeat: int = 3, number: int = 100000, size: int = 100
 ) -> Dict[str, str]:
     """Time the benchmark_addition function."""
-    function_name = ""
-    performance_list = []
-    # TODO: add all of the required source code
-    # needed to time the execution of the benchmark
-    # using the timeit module provided by Python
-    # TODO: return a dictionary with the function's
-    # name and then the results from the benchmark
+    # Set up the timer using the timeit module
+    setup_code = f"from systemsense.benchmark import benchmark_addition"
+    stmt_code = f"benchmark_addition({size})"
+
+    # Run the timer and collect the performance data
+    performance_list = timeit.repeat(
+        stmt=stmt_code, setup=setup_code, repeat=repeat, number=number
+    )
+
+    # Return the results in the required format
+    function_name = "benchmark_addition"
     return {function_name: str(performance_list)}
 
 
 def benchmark_multiplication(size: int = 100) -> None:
     """Perform a benchmark involving a multiplication."""
-    # TODO: initialize the result to zero;
-    # add the value of i to the result;
-    # TODO: for each value of i in the range
-    # of the specified size, multiply
-    # it together three times and then
-    # add it to the running result
+    # Initialize the result to one (since we're multiplying)
+    result = 1
+    # For each value of i in the range of the specified size,
+    # multiply it together three times and then add it to the running result
+    for i in range(size):
+        for _ in range(3):
+            result *= i
 
 
 def time_benchmark_multiplication(
     repeat: int = 3, number: int = 100000, size: int = 100
 ) -> Dict[str, str]:
     """Time the benchmark_multiplication function."""
-    function_name = ""
-    performance_list = []
-    # TODO: add all of the required source code
-    # needed to time the execution of the benchmark
-    # using the timeit module provided by Python
-    # TODO: return a dictionary with the function's
-    # name and then the results from the benchmark
+    setup_code = f"from systemsense.benchmark import benchmark_multiplication"
+    stmt_code = f"benchmark_multiplication({size})"
+
+    # Run the timer and collect the performance data
+    performance_list = timeit.repeat(
+        stmt=stmt_code, setup=setup_code, repeat=repeat, number=number
+    )
+
+    # Return the results in the required format
+    function_name = "benchmark_multiplication"
     return {function_name: str(performance_list)}
 
 
 def benchmark_exponentiation(size: int = 100) -> None:
     """Perform a benchmark involving an exponentiation."""
-    # TODO: initialize the result to zero;
+    # initialize the result to zero;
+    result = 0
     # add the value of i to the result;
-    # TODO: for each value of i in the range
+    # for each value of i in the range
+    for i in range(size):
+        result += i**i
     # of the specified size, compute the value
     # of i to the power of i and then
     # add it to the running result
@@ -111,20 +126,25 @@ def time_benchmark_exponentiation(
     repeat: int = 3, number: int = 100000, size: int = 100
 ) -> Dict[str, str]:
     """Time the benchmark_exponentiation function."""
-    function_name = ""
-    performance_list = []
-    # TODO: add all of the required source code
-    # needed to time the execution of the benchmark
-    # using the timeit module provided by Python
-    # TODO: return a dictionary with the function's
-    # name and then the results from the benchmark
+    setup_code = f"from systemsense.benchmark import benchmark_exponentiation"
+    stmt_code = f"benchmark_exponentiation({size})"
+
+    # Run the timer and collect the performance data
+    performance_list = timeit.repeat(
+        stmt=stmt_code, setup=setup_code, repeat=repeat, number=number
+    )
+
+    # Return the results in the required format
+    function_name = "benchmark_exponentiation"
     return {function_name: str(performance_list)}
 
 
 def benchmark_concatenation(size: int = 100) -> None:
     """Perform a benchmark involving an concatenation."""
-    # TODO: initialize the result to an empty string;
-    # TODO: concatenate the value of i to the result;
+    result = ""
+    for i in range(size):
+        for _ in range(3):
+            result += str(i)
     # for each value of i in the range
     # of the specified size, add it to
     # the running result three times
@@ -134,11 +154,14 @@ def time_benchmark_concatenation(
     repeat: int = 3, number: int = 100000, size: int = 100
 ) -> Dict[str, str]:
     """Time the benchmark_concatenation function."""
-    function_name = ""
-    performance_list = []
-    # TODO: add all of the required source code
-    # needed to time the execution of the benchmark
-    # using the timeit module provided by Python
-    # TODO: return a dictionary with the function's
-    # name and then the results from the benchmark
+    setup_code = f"from systemsense.benchmark import benchmark_concatenation"
+    stmt_code = f"benchmark_concatenation({size})"
+
+    # Run the timer and collect the performance data
+    performance_list = timeit.repeat(
+        stmt=stmt_code, setup=setup_code, repeat=repeat, number=number
+    )
+
+    # Return the results in the required format
+    function_name = "benchmark_concatenation"
     return {function_name: str(performance_list)}
